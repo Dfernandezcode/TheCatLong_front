@@ -1,5 +1,7 @@
 # Sports Ecommerce Website - TheCatLong.
 
+Done in collaboration between Alex Brasoveanu Jurado, Fernando Molero Martin and Daniel Fernandez
+
 ## Project Description:
 
 In order to continue expanding our understanding and knowledge of real projects this ecommerce website was built to be a functional sports retail store similar to Decathlon and other online outlets. It aims to organize products from multiple categories into a cohesive storefront with a focus on clean, easy to navigate UI and a smooth intuitive user experience from landing to checkout.
