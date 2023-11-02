@@ -2,6 +2,7 @@ import "./App.scss";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 
+
 function App() {
   return (
     <>
