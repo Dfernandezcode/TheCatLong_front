@@ -1,9 +1,16 @@
 import "./App.scss";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage/HomePage";
+
 
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<HomePage></HomePage>}></Route>
+        </Routes>
+      </HashRouter>
     </>
   );
 }
