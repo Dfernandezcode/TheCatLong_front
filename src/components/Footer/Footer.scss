@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+.footer__container {
+  background-color: $background-box;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
