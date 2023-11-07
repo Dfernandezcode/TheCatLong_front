@@ -1,5 +1,5 @@
-@import "../../../scss/fonts.scss";
-@import "../../../scss/variables.scss";
+@import "../../../styles/fonts.scss";
+@import "../../../styles/variables.scss";
 
 .description {
     background-color: grey;
@@ -50,6 +50,18 @@
             font-size: 2rem;
             z-index: 5;
             font-family: "Barlow Condensed", sans-serif;
+        }
+
+        &__btn {
+            font-size: 1rem;
+            z-index: 5;
+            font-family: "Montserrat", sans-serif;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            background-color: #fff;
         }
     }
 }
