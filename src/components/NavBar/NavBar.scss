@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+@import "../../styles/media-queries.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.bar {
+  width: 35px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: $font-color-dark;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.top {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.middle {
+  opacity: 0;
+}
+
+.bottom {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.menu {
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  margin: 0 0 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color-titles;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+@include mobile-only {
+  .menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: $background-box;
+    height: 100vh;
+    width: 300px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 15;
+  }
+
+  .menu.open {
+    transform: translateX(0);
+    display: flex;
+    color: $font-color-titles;
+  }
+  .hamburger-icon {
+    z-index: 20;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 20px;
+  }
+
+  li {
+    margin: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $font-color-titles;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+}

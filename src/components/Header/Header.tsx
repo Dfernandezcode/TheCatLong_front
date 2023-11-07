@@ -1,15 +1,14 @@
 import "./Header.scss";
 import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import { IoIosCart, IoIosMenu, IoMdPerson } from "react-icons/io";
+import { IoIosCart, IoMdPerson } from "react-icons/io";
+import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <NavLink className="header__links-link" to="/">
-          <IoIosMenu fontSize={30}></IoIosMenu>
-        </NavLink>
+        <NavBar></NavBar>
         <NavLink className="header__links-link" to="/">
           <img className="header__logo" src={logo} alt="logo" />
         </NavLink>
