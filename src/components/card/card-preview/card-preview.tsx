@@ -29,7 +29,7 @@ const CardPreview: React.FC<CardPreviewProps> = ({ product }) => {
       <h3 className="preview__price">€{product.price.toFixed(2)}</h3>
       <ul className="preview__selector">
         {product.colorOptions.map((option) => (
-          <li key={option.colorName} onClick={() => handleColorSelection(option.imageUrl)}>
+          <li className="preview__selector--color" key={option.colorName} onClick={() => handleColorSelection(option.imageUrl)}>
             {option.colorName.charAt(0).toUpperCase() + option.colorName.slice(1)}
           </li>
         ))}
