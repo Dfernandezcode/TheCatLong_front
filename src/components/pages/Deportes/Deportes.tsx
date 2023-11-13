@@ -3,7 +3,7 @@ import "./Deportes.scss";
 const Deportes = () => {
   return (
     <div className="deportes__container">
-      <p>Deportes</p>
+      <h2 className="deportes__title">Deportes</h2>
     </div>
   );
 };
