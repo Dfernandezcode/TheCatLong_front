@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +20,19 @@ const NavBar = () => {
       <div className={`menu ${isOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <Link to="/deportes">Deportes</Link>
+            <Link to="/deportes">
+              <FormattedMessage id="general:sports" />
+            </Link>
           </li>
           <li>
-            <Link to="/hombre">Hombre</Link>
+            <Link to="/hombre">
+              <FormattedMessage id="general:men" />
+            </Link>
           </li>
           <li>
-            <Link to="/mujer">Mujer</Link>
+            <Link to="/mujer">
+              <FormattedMessage id="general:woman" />
+            </Link>
           </li>
         </ul>
       </div>
