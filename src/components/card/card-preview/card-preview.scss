@@ -30,15 +30,13 @@
         display: flex;
         list-style-type: none;
         padding: 0;
+        flex-direction: row;
 
         &--color {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: blue;
-            border-radius: 100px;
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
             margin: 8px;
         }
     }
