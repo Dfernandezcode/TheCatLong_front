@@ -4,22 +4,18 @@ import { NavLink } from "react-router-dom";
 import { IoIosCart, IoMdPerson } from "react-icons/io";
 import NavBar from "../NavBar/NavBar";
 import { useContext } from "react";
-import { LanguageSelector } from "../../App";
+import { langContext } from "../Context/langContext";
 
 const Header = () => {
-  const { setLanguage } = useContext(LanguageSelector);
+  const idioma = useContext(langContext);
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__menu">
           <NavBar></NavBar>
           <div className="header__lang">
-            <button onClick={() => setLanguage("es-ES")} className="header__lang-btn">
-              ES
-            </button>
-            <button onClick={() => setLanguage("en-EN")} className="header__lang-btn">
-              EN
-            </button>
+            <button onClick={() => idioma.establecerLenguaje("es-ES")}>ES</button>
+            <button onClick={() => idioma.establecerLenguaje("en-EN")}>EN</button>
           </div>
         </div>
         <NavLink to="/">

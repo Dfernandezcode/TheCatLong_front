@@ -68,9 +68,9 @@ a {
     right: 0;
     top: 0;
     background-color: $background-box;
-    height: 50vh;
+    height: 30vh;
     border-bottom-left-radius: 40px;
-    width: 300px;
+    width: 200px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 15;
@@ -80,6 +80,7 @@ a {
     transform: translateX(0);
     display: flex;
     color: $font-color-titles;
+    align-items: center;
   }
   .hamburger-icon {
     z-index: 20;
@@ -93,7 +94,7 @@ a {
   }
 
   li {
-    margin: 20px;
+    margin: 10px;
   }
 
   a {
