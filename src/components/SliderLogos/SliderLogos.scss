@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.sliderLogos {
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  &__logos {
+    overflow: hidden;
+    padding: 20px 0;
+    background: rgb(0, 0, 0);
+    white-space: nowrap;
+    position: relative;
+  }
+
+  &__logos:before,
+  &__logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  &__logos:hover &__logos-slide {
+    animation-play-state: paused;
+  }
+
+  &__logos-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+  }
+
+  &__logos-slide img {
+    height: 30px;
+    margin: 0 40px;
+  }
+}

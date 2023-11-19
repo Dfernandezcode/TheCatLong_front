@@ -7,6 +7,12 @@
     padding: 10px;
   }
 
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__links-pages {
     display: flex;
     align-items: center;
@@ -27,11 +33,14 @@
   }
 
   &__logo {
-    width: 150px;
+    width: 130px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mobile-only {
+      width: 100px;
+    }
   }
 
   &__search {
@@ -48,6 +57,28 @@
     font-size: 20px;
     font-style: italic;
     background-color: $background-generic;
-    border: 1px solid $font-color-dark;
+    border: 1px solid $font-color-titles;
+  }
+
+  &__lang {
+    margin-left: 15px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__lang-btn {
+    background: none;
+    color: $font-color-dark;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  &__lang-btn:hover {
+    background: $font-color-titles;
+    border-radius: 30%;
+    color: $font-color-dark;
+    border: none;
+    font-weight: 700;
   }
 }

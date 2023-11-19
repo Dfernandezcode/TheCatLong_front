@@ -1,15 +1,24 @@
 import "./Header.scss";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo 2.png";
 import { NavLink } from "react-router-dom";
 import { IoIosCart, IoMdPerson } from "react-icons/io";
 import NavBar from "../NavBar/NavBar";
+import { useContext } from "react";
+import { langContext } from "../Context/langContext";
 
 const Header = () => {
+  const idioma = useContext(langContext);
   return (
     <header className="header">
       <div className="header__container">
-        <NavBar></NavBar>
-        <NavLink className="header__links-link" to="/">
+        <div className="header__menu">
+          <NavBar></NavBar>
+          <div className="header__lang">
+            <button onClick={() => idioma.establecerLenguaje("es-ES")}>ES</button>
+            <button onClick={() => idioma.establecerLenguaje("en-EN")}>EN</button>
+          </div>
+        </div>
+        <NavLink to="/">
           <img className="header__logo" src={logo} alt="logo" />
         </NavLink>
         <div className="header__links-pages">

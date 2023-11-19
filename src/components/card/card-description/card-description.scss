@@ -1,5 +1,5 @@
-@import "../../../scss/fonts.scss";
-@import "../../../scss/variables.scss";
+@import "../../../styles/fonts.scss";
+@import "../../../styles/variables.scss";
 
 .description {
     background-color: grey;
@@ -13,14 +13,9 @@
         width: 100%;
     }
 
-    &__textarea {
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 32px;
-        z-index: 4;
+    &__title {
+        position: relative;
+        width: 100%;
 
         &__name {
             font-size: 2rem;
@@ -30,14 +25,28 @@
 
             &--secondary {
                 font-size: 3rem;
-                color: #000000;
+                color: $font-color-dark;
                 opacity: 0.1;
                 z-index: 1;
-                width: 90%;
+                top: 40%;
                 position: absolute;
+                margin: 0;
+                padding: 0;
             }
-
         }
+    }
+
+
+    &__textarea {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 32px;
+        z-index: 4;
+        background-color: $background-box;
+
 
         &__text {
             font-size: 1rem;
@@ -50,6 +59,40 @@
             font-size: 2rem;
             z-index: 5;
             font-family: "Barlow Condensed", sans-serif;
+        }
+
+        &__btn {
+            font-size: 1rem;
+            z-index: 5;
+            font-family: "Montserrat", sans-serif;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            background-color: $btn-color-primary;
+            color: $font-color-light;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+    }
+
+    &__selector {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        &--color {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 16px 0 0;
         }
     }
 }
