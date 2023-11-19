@@ -12,8 +12,8 @@ import Mujer from "./components/pages/Mujer/Mujer";
 function App() {
   return (
     <>
-      <CardPreview />
-      <CardDescription />
+      {/* <CardPreview />
+      <CardDescription /> */}
       <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}></Route>
