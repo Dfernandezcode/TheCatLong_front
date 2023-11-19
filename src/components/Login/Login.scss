@@ -1,0 +1,112 @@
+@import "../../styles/variables.scss";
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
+}
+
+.login {
+  background-color: $background-box;
+  width: 275px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    color: $font-color-titles;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin: 10px auto 0 auto;
+    padding: 12px 0;
+    width: 180px;
+    height: 2rem;
+    border: none;
+    border-radius: 20px;
+    text-indent: 10px;
+    box-shadow: 2px 2px 4px 0px $font-color-titles;
+
+    &::placeholder {
+      color: $font-color-titles;
+    }
+
+    &:focus {
+      width: 190px;
+      height: calc(2rem + 5px);
+      margin-top: 5px;
+      outline-color: $font-color-titles;
+    }
+  }
+
+  &__button {
+    background-color: $font-color-light;
+    color: $font-color-titles;
+    border: 1px solid $font-color-titles;
+    font-size: 1rem;
+    border-radius: 25px;
+    padding: 8px 10px;
+    margin-top: 20px;
+    width: 120px;
+    height: 35px;
+    box-shadow: 2px 2px 4px 0px $font-color-titles;
+
+    &:hover {
+      margin-top: 15px;
+      width: 125px;
+      height: 40px;
+    }
+
+    &:active {
+      box-shadow: inset 2px 2px 4px 0px $font-color-titles;
+      background-color: $background-box;
+    }
+
+    &:focus {
+      outline-color: $font-color-titles;
+    }
+  }
+
+  &__help-pass {
+    color: $font-color-titles;
+    font-size: 0.7rem;
+    margin: 8px 0;
+    text-decoration: underline;
+
+    &:focus {
+      outline-color: $font-color-titles;
+    }
+  }
+
+  &__sign-up {
+    margin: 10px 0;
+
+    &__text {
+      font-size: 0.8rem;
+      color: $font-color-dark-grey;
+    }
+
+    &__link {
+      font-size: 1.1rem;
+      text-decoration: underline;
+      margin-left: 5px;
+
+      &:focus {
+        outline-color: $font-color-titles;
+      }
+    }
+  }
+}
