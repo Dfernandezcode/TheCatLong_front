@@ -27,7 +27,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ product }) => {
   };
 
   return (
-    <>
+    <div className="description__container">
       <div className="description">
         <img className="description__img" src={currentImage} alt={product.name} />
         <div className="description__textarea">
@@ -35,8 +35,6 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ product }) => {
             <h2 className="description__title__name">{product.name}</h2>
             <h2 className="description__title__name--secondary">{product.name}</h2>
           </div>
-
-          {/* Star rating display */}
           <div className="description__rating">
             {[...Array(5)].map((_, index) => (
               <Rating key={index} filled={index < product.rating} />
@@ -53,7 +51,7 @@ const CardDescription: React.FC<CardDescriptionProps> = ({ product }) => {
           <button className="description__textarea__btn">Add to cart</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

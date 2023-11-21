@@ -1,11 +1,20 @@
 @import "../../../styles/fonts.scss";
 @import "../../../styles/variables.scss";
 
+.description__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+}
+
 .description {
     background-color: grey;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    width: 90vw;
 
     &__img {
         height: 50%;
