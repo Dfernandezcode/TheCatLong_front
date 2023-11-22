@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.cardButton {
+  &__btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
