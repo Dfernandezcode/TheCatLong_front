@@ -1,4 +1,4 @@
-import "./Deportes.scss";
+import "../Cateogories.scss";
 import CardButton from "../../CardButton/CardButton";
 
 const Deportes = () => {
@@ -8,13 +8,12 @@ const Deportes = () => {
   };
 
   return (
-    <div className="deportes__container">
-      <div>
-        <img className="deportes__img" src=""></img>
-        <h2 className="deportes__title">DEPORTES</h2>
+    <div className="category__container">
+      <div className="category__tagbox">
+        <h2 className="category__title">DEPORTES</h2>
       </div>
-      <h3 className="deportes__subtitle">CATEGORÍAS</h3>
-      <div className="deportes__grid">
+      <h3 className="category__subtitle">CATEGORÍAS</h3>
+      <div className="category__grid">
         <CardButton title="BALONCESTO" imageUrl="src/assets/ImgSections/sports/baloncesto_3.jpg" onClick={handleButtonClick} />
         <CardButton title="FÚTBOL" imageUrl="src/assets/ImgSections/sports/futbol.jpg" onClick={handleButtonClick} />
         <CardButton title="CICLISMO" imageUrl="src/assets/ImgSections/sports/ciclismo.jpg" onClick={handleButtonClick} />
