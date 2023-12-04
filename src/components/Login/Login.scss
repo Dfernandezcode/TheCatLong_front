@@ -77,7 +77,10 @@
 
     &:active {
       box-shadow: inset 2px 2px 4px 0px $font-color-titles;
-      background-color: $background-box;
+      background-color: $font-color-light;
+      width: 120px;
+      height: 35px;
+      margin-top: 20px;
     }
 
     &:focus {

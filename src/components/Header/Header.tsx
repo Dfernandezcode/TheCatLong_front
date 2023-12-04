@@ -3,17 +3,18 @@ import logo from "../../assets/logo 2.png";
 import { NavLink } from "react-router-dom";
 import { IoIosCart, IoMdPerson } from "react-icons/io";
 import NavBar from "../NavBar/NavBar";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { langContext } from "../Context/langContext";
 import Login from "../Login/Login";
 
 const Header = () => {
   const idioma = useContext(langContext);
+  const [opened, setOpened] = useState<boolean>(true);
 
-  const openLogin = () => {
+  useEffect(() => {
     const login = document.getElementById("login-modal");
-    login?.classList.contains("show") ? login?.classList.remove("show") : login?.classList.add("show");
-  };
+    opened ? login?.classList.remove("show") : login?.classList.add("show");
+  }, [opened]);
 
   return (
     <header className="header">
@@ -30,7 +31,7 @@ const Header = () => {
         </NavLink>
         <div className="header__links-pages">
           <div className="header__links-link">
-            <IoMdPerson onClick={() => openLogin()} fontSize={30}></IoMdPerson>
+            <IoMdPerson onClick={() => setOpened(!opened)} fontSize={30}></IoMdPerson>
           </div>
           {/* <NavLink className="header__links-link" to="/profile">
             <IoMdPerson fontSize={30}></IoMdPerson>
